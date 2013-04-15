@@ -12,8 +12,10 @@
 
 @interface GameState : NSObject
 
-- (id)initWithNumRows:(int)numRows;
+@property (readonly) int numRows;
+@property (readonly) int linesLeft;
 
+- (id)initWithNumRows:(int)numRows;
 - (BOOL)isGameOver;
 - (BOOL)isValidMove:(GameMove*)moveToPlay;
 - (void)playMove:(GameMove*)moveToPlay;
