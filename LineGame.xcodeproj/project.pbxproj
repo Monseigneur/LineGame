@@ -18,6 +18,8 @@
 		BC181C99171BF4620044FC0C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC181C98171BF4620044FC0C /* Default-568h@2x.png */; };
 		BC181C9C171BF4620044FC0C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC181C9A171BF4620044FC0C /* MainStoryboard.storyboard */; };
 		BC181C9F171BF4620044FC0C /* LineGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC181C9E171BF4620044FC0C /* LineGameViewController.m */; };
+		BC181CA8171BF5190044FC0C /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = BC181CA7171BF5190044FC0C /* GameState.m */; };
+		BC181CAB171BF56B0044FC0C /* GameMove.m in Sources */ = {isa = PBXBuildFile; fileRef = BC181CAA171BF56B0044FC0C /* GameMove.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		BC181C9B171BF4620044FC0C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BC181C9D171BF4620044FC0C /* LineGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineGameViewController.h; sourceTree = "<group>"; };
 		BC181C9E171BF4620044FC0C /* LineGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineGameViewController.m; sourceTree = "<group>"; };
+		BC181CA6171BF5190044FC0C /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		BC181CA7171BF5190044FC0C /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
+		BC181CA9171BF56B0044FC0C /* GameMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMove.h; sourceTree = "<group>"; };
+		BC181CAA171BF56B0044FC0C /* GameMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameMove.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		BC181C88171BF4620044FC0C /* LineGame */ = {
 			isa = PBXGroup;
 			children = (
+				BC181CA5171BF4E10044FC0C /* Model */,
 				BC181C91171BF4620044FC0C /* LineGameAppDelegate.h */,
 				BC181C92171BF4620044FC0C /* LineGameAppDelegate.m */,
 				BC181C9A171BF4620044FC0C /* MainStoryboard.storyboard */,
@@ -105,6 +112,17 @@
 				BC181C98171BF4620044FC0C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC181CA5171BF4E10044FC0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC181CA6171BF5190044FC0C /* GameState.h */,
+				BC181CA7171BF5190044FC0C /* GameState.m */,
+				BC181CA9171BF56B0044FC0C /* GameMove.h */,
+				BC181CAA171BF56B0044FC0C /* GameMove.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +195,8 @@
 				BC181C8F171BF4620044FC0C /* main.m in Sources */,
 				BC181C93171BF4620044FC0C /* LineGameAppDelegate.m in Sources */,
 				BC181C9F171BF4620044FC0C /* LineGameViewController.m in Sources */,
+				BC181CA8171BF5190044FC0C /* GameState.m in Sources */,
+				BC181CAB171BF56B0044FC0C /* GameMove.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
