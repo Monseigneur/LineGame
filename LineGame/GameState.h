@@ -8,7 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class GameMove;
+
 @interface GameState : NSObject
 
+- (id)initWithNumRows:(int)numRows;
+
+- (BOOL)isGameOver;
+- (BOOL)isValidMove:(GameMove*)moveToPlay;
+- (void)playMove:(GameMove*)moveToPlay;
 
 @end
