@@ -20,6 +20,9 @@
 		BC181C9F171BF4620044FC0C /* LineGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC181C9E171BF4620044FC0C /* LineGameViewController.m */; };
 		BC181CA8171BF5190044FC0C /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = BC181CA7171BF5190044FC0C /* GameState.m */; };
 		BC181CAB171BF56B0044FC0C /* GameMove.m in Sources */ = {isa = PBXBuildFile; fileRef = BC181CAA171BF56B0044FC0C /* GameMove.m */; };
+		BCB86E6F172B5FF200B0049B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB86E6E172B5FF200B0049B /* SettingsViewController.m */; };
+		BCB86E72172B841100B0049B /* GameSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB86E71172B841100B0049B /* GameSettings.m */; };
+		BCC9FC06172B55740084EC85 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC9FC05172B55740084EC85 /* GameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,12 @@
 		BC181CA7171BF5190044FC0C /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
 		BC181CA9171BF56B0044FC0C /* GameMove.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMove.h; sourceTree = "<group>"; };
 		BC181CAA171BF56B0044FC0C /* GameMove.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameMove.m; sourceTree = "<group>"; };
+		BCB86E6D172B5FF200B0049B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		BCB86E6E172B5FF200B0049B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		BCB86E70172B841100B0049B /* GameSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSettings.h; sourceTree = "<group>"; };
+		BCB86E71172B841100B0049B /* GameSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSettings.m; sourceTree = "<group>"; };
+		BCC9FC04172B55740084EC85 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		BCC9FC05172B55740084EC85 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +98,14 @@
 		BC181C88171BF4620044FC0C /* LineGame */ = {
 			isa = PBXGroup;
 			children = (
-				BC181CA5171BF4E10044FC0C /* Model */,
+				BC181CA5171BF4E10044FC0C /* Game */,
 				BC181C91171BF4620044FC0C /* LineGameAppDelegate.h */,
 				BC181C92171BF4620044FC0C /* LineGameAppDelegate.m */,
 				BC181C9A171BF4620044FC0C /* MainStoryboard.storyboard */,
+				BCB86E6D172B5FF200B0049B /* SettingsViewController.h */,
+				BCB86E6E172B5FF200B0049B /* SettingsViewController.m */,
+				BCC9FC04172B55740084EC85 /* GameViewController.h */,
+				BCC9FC05172B55740084EC85 /* GameViewController.m */,
 				BC181C9D171BF4620044FC0C /* LineGameViewController.h */,
 				BC181C9E171BF4620044FC0C /* LineGameViewController.m */,
 				BC181C89171BF4620044FC0C /* Supporting Files */,
@@ -114,15 +127,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BC181CA5171BF4E10044FC0C /* Model */ = {
+		BC181CA5171BF4E10044FC0C /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				BCB86E70172B841100B0049B /* GameSettings.h */,
+				BCB86E71172B841100B0049B /* GameSettings.m */,
 				BC181CA6171BF5190044FC0C /* GameState.h */,
 				BC181CA7171BF5190044FC0C /* GameState.m */,
 				BC181CA9171BF56B0044FC0C /* GameMove.h */,
 				BC181CAA171BF56B0044FC0C /* GameMove.m */,
 			);
-			name = Model;
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +212,9 @@
 				BC181C9F171BF4620044FC0C /* LineGameViewController.m in Sources */,
 				BC181CA8171BF5190044FC0C /* GameState.m in Sources */,
 				BC181CAB171BF56B0044FC0C /* GameMove.m in Sources */,
+				BCC9FC06172B55740084EC85 /* GameViewController.m in Sources */,
+				BCB86E6F172B5FF200B0049B /* SettingsViewController.m in Sources */,
+				BCB86E72172B841100B0049B /* GameSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +337,7 @@
 				BC181CA4171BF4620044FC0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

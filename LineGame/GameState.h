@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @class GameMove;
+@class GameSettings;
 
 @interface GameState : NSObject
 
-@property (readonly) int numRows;
+@property (strong, nonatomic) GameSettings* settings;
 @property (readonly) int linesLeft;
 
-- (id)initWithNumRows:(int)numRows;
+- (id)initWithSettings:(GameSettings*)settings;
+- (int)numRows;
+- (int)aiDifficulty;
 - (BOOL)isGameOver;
 - (BOOL)isValidMove:(GameMove*)moveToPlay;
 - (void)playMove:(GameMove*)moveToPlay;

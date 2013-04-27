@@ -10,4 +10,7 @@
 
 @interface LineGameViewController : UIViewController
 
+- (IBAction)saveSettings:(UIStoryboardSegue*)segue;
+- (IBAction)cancel:(UIStoryboardSegue*)segue;
+
 @end

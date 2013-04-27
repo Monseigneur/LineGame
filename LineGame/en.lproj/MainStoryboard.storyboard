@@ -1,23 +1,238 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Line Game View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="LineGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Front page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQL-g6-ISx">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lad-GY-6So">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sQE-bT-156" kind="modal" identifier="initGame" id="lCc-MB-JIM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHi-r1-9Au">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rQL-g6-ISx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="06g-Um-6Ih"/>
+                            <constraint firstItem="Lad-GY-6So" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AY7-Vl-Qo1"/>
+                            <constraint firstItem="qHi-r1-9Au" firstAttribute="centerX" secondItem="Lad-GY-6So" secondAttribute="centerX" type="default" id="E49-Jb-rnN"/>
+                            <constraint firstAttribute="bottom" secondItem="Lad-GY-6So" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="OdX-9T-iJp"/>
+                            <constraint firstItem="rQL-g6-ISx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="k8H-dN-UZw"/>
+                            <constraint firstAttribute="bottom" secondItem="qHi-r1-9Au" secondAttribute="bottom" constant="87" id="lGT-Bg-vH9"/>
+                            <constraint firstItem="rQL-g6-ISx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sXA-8l-FUJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Lad-GY-6So" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wTO-p7-Cp6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Game View Controller-->
+        <scene sceneID="Q1o-Ie-ILR">
+            <objects>
+                <viewController id="eVv-Ud-gmS" customClass="GameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uX6-N9-CDa">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Game View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpi-9k-Bru">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rows:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfM-aG-24U">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AI Difficulty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hn-Xr-zEe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dpi-9k-Bru" firstAttribute="top" secondItem="uX6-N9-CDa" secondAttribute="top" constant="20" symbolic="YES" type="default" id="9Nm-Uv-hdm"/>
+                            <constraint firstAttribute="trailing" secondItem="dpi-9k-Bru" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HFF-M0-dyh"/>
+                            <constraint firstItem="dpi-9k-Bru" firstAttribute="leading" secondItem="uX6-N9-CDa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Rrg-Jk-K6m"/>
+                            <constraint firstItem="tfM-aG-24U" firstAttribute="top" secondItem="uX6-N9-CDa" secondAttribute="top" constant="57" id="WVW-LR-Y7C"/>
+                            <constraint firstItem="tfM-aG-24U" firstAttribute="leading" secondItem="uX6-N9-CDa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XvR-QB-KTv"/>
+                            <constraint firstAttribute="trailing" secondItem="6Hn-Xr-zEe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iLt-hQ-RWr"/>
+                            <constraint firstAttribute="trailing" secondItem="tfM-aG-24U" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lFP-7M-ldk"/>
+                            <constraint firstItem="6Hn-Xr-zEe" firstAttribute="leading" secondItem="uX6-N9-CDa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lUn-8q-Aq5"/>
+                            <constraint firstItem="6Hn-Xr-zEe" firstAttribute="top" secondItem="uX6-N9-CDa" secondAttribute="top" constant="97" id="tlU-ht-Pv3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aiDifficultyLabel" destination="6Hn-Xr-zEe" id="gXg-DH-LvI"/>
+                        <outlet property="rowsLabel" destination="tfM-aG-24U" id="41j-Bi-Qgq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOq-mA-BS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="387"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="X8U-x7-87d">
+            <objects>
+                <viewController id="sQE-bT-156" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eMK-xT-qLf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skH-OD-DC3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rows" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQz-f0-Ke4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="AI Difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xas-bJ-OTg">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAG-AD-i84">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzS-nQ-6oH">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eVv-Ud-gmS" kind="modal" identifier="startGame" id="dgL-Jr-Ee1"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m8u-Wu-st4">
+                                <segments>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                    <segment title="7"/>
+                                </segments>
+                                <connections>
+                                    <action selector="setRows:" destination="sQE-bT-156" eventType="valueChanged" id="3cb-HT-6kH"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kzY-af-t06">
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                                <connections>
+                                    <action selector="setAiDifficulty:" destination="sQE-bT-156" eventType="valueChanged" id="F4C-NU-gND"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m8u-Wu-st4" firstAttribute="top" secondItem="eMK-xT-qLf" secondAttribute="top" constant="126" id="1gl-bQ-m2d"/>
+                            <constraint firstAttribute="trailing" secondItem="OzS-nQ-6oH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5jb-xk-aaE"/>
+                            <constraint firstItem="ZQz-f0-Ke4" firstAttribute="top" secondItem="eMK-xT-qLf" secondAttribute="top" constant="90" id="7Sv-GV-3Zx"/>
+                            <constraint firstItem="skH-OD-DC3" firstAttribute="leading" secondItem="eMK-xT-qLf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9iT-pK-gn0"/>
+                            <constraint firstItem="kzY-af-t06" firstAttribute="leading" secondItem="eMK-xT-qLf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Cun-Cc-TdL"/>
+                            <constraint firstItem="kzY-af-t06" firstAttribute="top" secondItem="eMK-xT-qLf" secondAttribute="top" constant="252" id="JrQ-BS-a9A"/>
+                            <constraint firstItem="Xas-bJ-OTg" firstAttribute="top" secondItem="eMK-xT-qLf" secondAttribute="top" constant="216" id="LUc-S9-3JX"/>
+                            <constraint firstAttribute="bottom" secondItem="rAG-AD-i84" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Lm2-6l-f9w"/>
+                            <constraint firstAttribute="trailing" secondItem="Xas-bJ-OTg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="OiS-Ls-5Lq"/>
+                            <constraint firstAttribute="trailing" secondItem="kzY-af-t06" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Wt7-EU-9y7"/>
+                            <constraint firstItem="skH-OD-DC3" firstAttribute="top" secondItem="eMK-xT-qLf" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ZGI-Pi-Q44"/>
+                            <constraint firstAttribute="bottom" secondItem="OzS-nQ-6oH" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ble-Ff-91R"/>
+                            <constraint firstAttribute="trailing" secondItem="ZQz-f0-Ke4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ckB-5B-YbD"/>
+                            <constraint firstAttribute="trailing" secondItem="m8u-Wu-st4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dAc-Ee-W68"/>
+                            <constraint firstItem="m8u-Wu-st4" firstAttribute="leading" secondItem="eMK-xT-qLf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dsC-js-5hL"/>
+                            <constraint firstItem="ZQz-f0-Ke4" firstAttribute="leading" secondItem="eMK-xT-qLf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fSL-QO-LdA"/>
+                            <constraint firstItem="Xas-bJ-OTg" firstAttribute="leading" secondItem="eMK-xT-qLf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kjV-C7-UAR"/>
+                            <constraint firstItem="rAG-AD-i84" firstAttribute="leading" secondItem="eMK-xT-qLf" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lwE-Wd-4uv"/>
+                            <constraint firstAttribute="trailing" secondItem="skH-OD-DC3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="w3A-7v-F13"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aiSegmentController" destination="eMK-xT-qLf" id="5CY-5c-ws3"/>
+                        <outlet property="rowSegmentController" destination="eMK-xT-qLf" id="SQz-oQ-q9e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bxb-V2-Rhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="-331"/>
+        </scene>
     </scenes>
+    <classes>
+        <class className="GameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="aiDifficultyLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rowsLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LineGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LineGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="saveSettings:" candidateClass="UIStoryboardSegue"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="setAiDifficulty:"/>
+                <relationship kind="action" name="setRows:"/>
+                <relationship kind="outlet" name="aiSegmentController" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="rowSegmentController" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="UIStoryboardSegue" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIStoryboardSegue.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
