@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "SettingsViewController.h"
 #import "GameState.h"
 
 @interface GameViewController ()
@@ -15,25 +16,31 @@
 
 @implementation GameViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    _state = nil;
+    return self;
+  }
+  return nil;
+}
+
 - (void)startGameWithSettings:(GameSettings*)settings {
   _state = [[GameState alloc] initWithSettings:settings];
   [self viewDidLoad];
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  _rowsLabel.text = [NSString stringWithFormat:@"Rows: %d", [_state numRows]];
-  _aiDifficultyLabel.text = [NSString stringWithFormat:@"AI Difficulty: %d", [_state aiDifficulty]];
+  
+  if (_state) {
+    _rowsLabel.text = [NSString stringWithFormat:@"Rows: %d", [_state numRows]];
+    _aiDifficultyLabel.text = [NSString stringWithFormat:@"AI Difficulty: %d", [_state aiDifficulty]];
+  } else {
+    _rowsLabel.text = @"No current game";
+    _aiDifficultyLabel.text = @"";
+  }
 	// Do any additional setup after loading the view.
 }
 
@@ -43,9 +50,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([[segue identifier] isEqualToString:@"playGame"]) {
-    
+- (IBAction)makeNewGame:(UIStoryboardSegue*)segue {
+  if ([[segue identifier] isEqualToString:@"makeNewGame"]) {
+    SettingsViewController* setCont = [segue sourceViewController];
+    if ([setCont settings]) {
+      [self startGameWithSettings:[setCont settings]];
+      [self viewDidLoad];
+    }
+  }
+}
+
+- (IBAction)cancelNewGame:(UIStoryboardSegue*)segue {
+  if ([[segue identifier] isEqualToString:@"cancelNewGame"]) {
+    if (![self.presentedViewController isBeingDismissed]) {
+      //[self dismissViewControllerAnimated:YES completion:NULL];
+      _state = nil;
+      [self viewDidLoad];
+    }
   }
 }
 

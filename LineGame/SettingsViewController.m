@@ -19,20 +19,9 @@
 
 @implementation SettingsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [_rowSegmentController addTarget:self action:@selector(setRows:) forControlEvents:UIControlEventValueChanged];
-  [_aiSegmentController addTarget:self action:@selector(setAiDifficulty:) forControlEvents:UIControlEventValueChanged];
 	// Do any additional setup after loading the view.
 }
 
@@ -43,19 +32,17 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([[segue identifier] isEqualToString:@"startGame"]) {
-    GameSettings* settings = [[GameSettings alloc] initWithRows:_numRows AI:_aiDifficulty];
-    GameViewController* gameView = [segue destinationViewController];
-    [gameView startGameWithSettings:settings];
+  if ([[segue identifier] isEqualToString:@"makeNewGame"]) {
+    _settings = [[GameSettings alloc] initWithRows:_numRows AI:_aiDifficulty];
   }
 }
 
-- (IBAction)setRows:(id)sender {
+- (IBAction)changeRows:(id)sender {
   UISegmentedControl* segCont = (UISegmentedControl*) sender;
   _numRows = segCont.selectedSegmentIndex;
 }
 
-- (IBAction)setAiDifficulty:(id)sender {
+- (IBAction)changeAI:(id)sender {
   UISegmentedControl* segCont = (UISegmentedControl*) sender;
   _aiDifficulty = segCont.selectedSegmentIndex;
 }

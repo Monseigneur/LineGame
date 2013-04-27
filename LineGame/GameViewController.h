@@ -18,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *aiDifficultyLabel;
 
 - (void)startGameWithSettings:(GameSettings*)settings;
+- (IBAction)makeNewGame:(UIStoryboardSegue*)segue;
+- (IBAction)cancelNewGame:(UIStoryboardSegue*)segue;
 
 @end

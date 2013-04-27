@@ -27,28 +27,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sQE-bT-156" kind="modal" identifier="initGame" id="lCc-MB-JIM"/>
+                                    <segue destination="eVv-Ud-gmS" kind="modal" identifier="newGame" id="Na6-YJ-IO5"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHi-r1-9Au">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rQL-g6-ISx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="06g-Um-6Ih"/>
                             <constraint firstItem="Lad-GY-6So" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AY7-Vl-Qo1"/>
-                            <constraint firstItem="qHi-r1-9Au" firstAttribute="centerX" secondItem="Lad-GY-6So" secondAttribute="centerX" type="default" id="E49-Jb-rnN"/>
                             <constraint firstAttribute="bottom" secondItem="Lad-GY-6So" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="OdX-9T-iJp"/>
                             <constraint firstItem="rQL-g6-ISx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="k8H-dN-UZw"/>
-                            <constraint firstAttribute="bottom" secondItem="qHi-r1-9Au" secondAttribute="bottom" constant="87" id="lGT-Bg-vH9"/>
                             <constraint firstItem="rQL-g6-ISx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sXA-8l-FUJ"/>
                             <constraint firstAttribute="trailing" secondItem="Lad-GY-6So" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wTO-p7-Cp6"/>
                         </constraints>
@@ -80,17 +68,44 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaw-fl-VAg">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Quit">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kq-yl-fRh">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sQE-bT-156" kind="modal" identifier="initGame" id="cjx-Rd-bhV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7Kq-yl-fRh" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3sm-GQ-az9"/>
                             <constraint firstItem="dpi-9k-Bru" firstAttribute="top" secondItem="uX6-N9-CDa" secondAttribute="top" constant="20" symbolic="YES" type="default" id="9Nm-Uv-hdm"/>
                             <constraint firstAttribute="trailing" secondItem="dpi-9k-Bru" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HFF-M0-dyh"/>
                             <constraint firstItem="dpi-9k-Bru" firstAttribute="leading" secondItem="uX6-N9-CDa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Rrg-Jk-K6m"/>
+                            <constraint firstItem="jaw-fl-VAg" firstAttribute="leading" secondItem="uX6-N9-CDa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="THS-an-sWF"/>
+                            <constraint firstAttribute="bottom" secondItem="7Kq-yl-fRh" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Txm-D8-DW6"/>
                             <constraint firstItem="tfM-aG-24U" firstAttribute="top" secondItem="uX6-N9-CDa" secondAttribute="top" constant="57" id="WVW-LR-Y7C"/>
                             <constraint firstItem="tfM-aG-24U" firstAttribute="leading" secondItem="uX6-N9-CDa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XvR-QB-KTv"/>
                             <constraint firstAttribute="trailing" secondItem="6Hn-Xr-zEe" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="iLt-hQ-RWr"/>
                             <constraint firstAttribute="trailing" secondItem="tfM-aG-24U" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lFP-7M-ldk"/>
                             <constraint firstItem="6Hn-Xr-zEe" firstAttribute="leading" secondItem="uX6-N9-CDa" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lUn-8q-Aq5"/>
+                            <constraint firstAttribute="bottom" secondItem="jaw-fl-VAg" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="qC9-p7-4dk"/>
                             <constraint firstItem="6Hn-Xr-zEe" firstAttribute="top" secondItem="uX6-N9-CDa" secondAttribute="top" constant="97" id="tlU-ht-Pv3"/>
                         </constraints>
                     </view>
@@ -101,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOq-mA-BS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="387"/>
+            <point key="canvasLocation" x="764" y="401"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="X8U-x7-87d">
@@ -135,6 +150,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Idd-NA-HaQ" kind="unwind" identifier="cancelNewGame" unwindAction="cancelNewGame:" id="M9m-uO-ci9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzS-nQ-6oH">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -146,7 +164,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eVv-Ud-gmS" kind="modal" identifier="startGame" id="dgL-Jr-Ee1"/>
+                                    <segue destination="Idd-NA-HaQ" kind="unwind" identifier="makeNewGame" unwindAction="makeNewGame:" id="Xm5-fo-Gdu"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m8u-Wu-st4">
@@ -156,7 +174,7 @@
                                     <segment title="7"/>
                                 </segments>
                                 <connections>
-                                    <action selector="setRows:" destination="sQE-bT-156" eventType="valueChanged" id="3cb-HT-6kH"/>
+                                    <action selector="changeRows:" destination="sQE-bT-156" eventType="valueChanged" id="E6S-kq-mvA"/>
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kzY-af-t06">
@@ -165,7 +183,7 @@
                                     <segment title="Hard"/>
                                 </segments>
                                 <connections>
-                                    <action selector="setAiDifficulty:" destination="sQE-bT-156" eventType="valueChanged" id="F4C-NU-gND"/>
+                                    <action selector="changeAI:" destination="sQE-bT-156" eventType="valueChanged" id="LA7-cI-Qdd"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -198,6 +216,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxb-V2-Rhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Idd-NA-HaQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="764" y="-331"/>
         </scene>
@@ -206,6 +225,8 @@
         <class className="GameViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GameViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelNewGame:" candidateClass="UIStoryboardSegue"/>
+                <relationship kind="action" name="makeNewGame:" candidateClass="UIStoryboardSegue"/>
                 <relationship kind="outlet" name="aiDifficultyLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="rowsLabel" candidateClass="UILabel"/>
             </relationships>
@@ -223,8 +244,8 @@
         <class className="SettingsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
             <relationships>
-                <relationship kind="action" name="setAiDifficulty:"/>
-                <relationship kind="action" name="setRows:"/>
+                <relationship kind="action" name="changeAI:"/>
+                <relationship kind="action" name="changeRows:"/>
                 <relationship kind="outlet" name="aiSegmentController" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="rowSegmentController" candidateClass="UISegmentedControl"/>
             </relationships>

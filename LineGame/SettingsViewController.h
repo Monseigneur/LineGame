@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class GameSettings;
+
 @interface SettingsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UISegmentedControl* rowSegmentController;
 @property (strong, nonatomic) IBOutlet UISegmentedControl* aiSegmentController;
 
-- (IBAction)setRows:(id)sender;
-- (IBAction)setAiDifficulty:(id)sender;
+@property (strong, nonatomic) GameSettings* settings;
+
+- (IBAction)changeRows:(id)sender;
+- (IBAction)changeAI:(id)sender;
 
 @end
